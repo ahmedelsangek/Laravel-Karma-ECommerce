@@ -14,9 +14,15 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        $data = Category::withCount('Products')->get();
+        // dd($data);
 
+        return view('profile.product.index', ['data' => $data]);
+    }
+
+    public function Dashboard()
+    {
         $data = Category::get();
-
         return view('Dashboard.category.index', ['data' => $data]);
     }
 
@@ -45,7 +51,7 @@ class CategoryController extends Controller
         $op = Category::create($data);
 
         if ($op) {
-            return redirect(url('category'));
+            return redirect(url('dashboard/category'));
         } else {
             return back();
         }
@@ -90,7 +96,7 @@ class CategoryController extends Controller
         $op = Category::where('id', $id)->update(["name" => $request->name]);
 
         if ($op) {
-            return redirect(url('category'));
+            return redirect(url('dashboard/category'));
         }
     }
 

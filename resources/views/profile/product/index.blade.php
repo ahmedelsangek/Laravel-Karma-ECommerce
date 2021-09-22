@@ -50,7 +50,7 @@
                     <div class="head">Browse Categories</div>
                     <ul class="main-categories">
                         @foreach ($data as $key => $value)
-                        <li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span class="lnr lnr-arrow-right"></span>{{ $value->name }}<span class="number">({{ $value->products_count }})</span></a></li>
+                        <li class="main-nav-list"><a href="{{ url('product/' . $value->id) }}"><span class="lnr lnr-arrow-right"></span>{{ $value->name }}<span class="number">({{ $value->products_count }})</span></a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -115,8 +115,7 @@
                             <div class="single-product">
                                 <img class="img-fluid" src="img/product/p1.jpg" alt="">
                                 <div class="product-details">
-                                    <h6>addidas New Hammer sole
-                                        for Sports person</h6>
+                                    <h6>{{ $value->name }}</h6>
                                     <div class="price">
                                         <h6>$150.00</h6>
                                         <h6 class="l-through">$210.00</h6>

@@ -19,7 +19,12 @@ Route::get('/', function () {
 });
 
 
+
+//---------------- Category Controller ----------------------------
+Route::get('dashboard/category', 'CategoryController@Dashboard');
 Route::resource('category', 'CategoryController');
 
 
+//---------------- Product Controller ----------------------------
+Route::get('dashboard/product', 'ProductController@IndexDashboard');
 Route::resource('product', 'ProductController');
