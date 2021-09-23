@@ -112,7 +112,7 @@
     background: -moz-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
     background: -o-linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
     background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 
@@ -937,7 +937,7 @@ h6 {
     border: 1px solid #f1f1f1;
 }
 .primary-checkbox input:checked + label {
-    background: url(../img/elements/primary-check.png) no-repeat center
+    background: url(./img/elements/primary-check.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -973,7 +973,7 @@ h6 {
     border: 1px solid #f1f1f1;
 }
 .confirm-checkbox input:checked + label {
-    background: url(../img/elements/success-check.png) no-repeat center
+    background: url(./img/elements/success-check.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1013,7 +1013,7 @@ h6 {
     z-index: 3;
 }
 .disabled-checkbox input:checked + label {
-    background: url(../img/elements/disabled-check.png) no-repeat center
+    background: url(./img/elements/disabled-check.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1049,7 +1049,7 @@ h6 {
     border: 1px solid #f1f1f1;
 }
 .primary-radio input:checked + label {
-    background: url(../img/elements/primary-radio.png) no-repeat center
+    background: url(./img/elements/primary-radio.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1085,7 +1085,7 @@ h6 {
     border: 1px solid #f1f1f1;
 }
 .confirm-radio input:checked + label {
-    background: url(../img/elements/success-radio.png) no-repeat center
+    background: url(./img/elements/success-radio.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1125,7 +1125,7 @@ h6 {
     z-index: 3;
 }
 .disabled-radio input:checked + label {
-    background: url(../img/elements/disabled-radio.png) no-repeat center
+    background: url(./img/elements/disabled-radio.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1504,7 +1504,9 @@ h6 {
 /* banner area css
 ============================================================================================ */
 .banner-area {
-    background: url(./img/banner/banner-bg.jpg) center no-repeat;
+    background-image: url("../img/banner/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     position: relative;
 }
@@ -1776,7 +1778,7 @@ h6 {
         #f6398d 45%,
         #f52cdc 100%
     );
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 
@@ -2096,7 +2098,7 @@ h6 {
 }
 .exclusive-deal-area .exclusive-left {
     position: realtive;
-    background: url(../img/exclusive.jpg) center no-repeat;
+    background: url(./img/exclusive.jpg) center no-repeat;
     background-size: cover;
     text-align: center;
     padding: 275px 0;
@@ -2536,14 +2538,14 @@ h6 {
     margin-left: 10px;
 }
 .quick-view-carousel-details .owl-controls .owl-dots .owl-dot:nth-child(1) {
-    background: url(../img/ob1.jpg);
+    background: url(./img/ob1.jpg);
     margin-left: 0;
 }
 .quick-view-carousel-details .owl-controls .owl-dots .owl-dot:nth-child(2) {
-    background: url(../img/ob2.jpg);
+    background: url(./img/ob2.jpg);
 }
 .quick-view-carousel-details .owl-controls .owl-dots .owl-dot:nth-child(3) {
-    background: url(../img/ob3.jpg);
+    background: url(./img/ob3.jpg);
 }
 .quick-view-carousel-details .owl-controls .owl-dots .owl-dot.active {
     box-shadow: 2.828px 2.828px 15px 0px rgba(0, 0, 0, 0.1);
@@ -2564,7 +2566,7 @@ h6 {
     .owl-controls
     .owl-dots
     .owl-dot:nth-child(1) {
-    background: url(../img/organic-food/ob1.jpg);
+    background: url(./img/organic-food/ob1.jpg);
     margin-left: 0;
 }
 .organic-body
@@ -2572,14 +2574,14 @@ h6 {
     .owl-controls
     .owl-dots
     .owl-dot:nth-child(2) {
-    background: url(../img/organic-food/ob2.jpg);
+    background: url(./img/organic-food/ob2.jpg);
 }
 .organic-body
     .quick-view-carousel
     .owl-controls
     .owl-dots
     .owl-dot:nth-child(3) {
-    background: url(../img/organic-food/ob3.jpg);
+    background: url(./img/organic-food/ob3.jpg);
 }
 .organic-body .organic span {
     color: #fff;
@@ -3081,7 +3083,7 @@ label {
     font-size: 14px;
     font-weight: 400;
     background: -webkit-linear-gradient(-180deg, #555555, #555555);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 .mini-cart-2a .single-cart-item .middle h6 {
@@ -3093,7 +3095,7 @@ label {
 }
 .mini-cart-2a .single-cart-item .cross span {
     background: -webkit-linear-gradient(-180deg, #777, #777);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 .mini-cart-2a .proceed-btn {
@@ -3147,7 +3149,7 @@ label {
     font-size: 14px;
     font-weight: 400;
     background: -webkit-linear-gradient(-180deg, #555555, #555555);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 .mini-cart .single-cart-item .middle h6 {
@@ -3159,7 +3161,7 @@ label {
 }
 .mini-cart .single-cart-item .cross span {
     background: -webkit-linear-gradient(-180deg, #777, #777);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 .mini-cart .proceed-btn {
@@ -3369,7 +3371,7 @@ label {
     content: "";
     height: 1px;
     width: 500px;
-    background: url(../img/logo/title-line.png) repeat;
+    background: url(./img/logo/title-line.png) repeat;
     top: 50%;
     right: 120%;
     transform: translateY(-50%);
@@ -3379,7 +3381,7 @@ label {
     content: "";
     height: 1px;
     width: 500px;
-    background: url(../img/logo/title-line.png) repeat;
+    background: url(./img/logo/title-line.png) repeat;
     top: 50%;
     left: 120%;
     transform: translateY(-50%);
@@ -3401,7 +3403,7 @@ label {
     content: "";
     height: 1px;
     width: 200px;
-    background: url(../img/logo/title-line.png) repeat;
+    background: url(./img/logo/title-line.png) repeat;
     top: 50%;
     right: 107%;
     transform: translateY(-50%);
@@ -3411,7 +3413,7 @@ label {
     content: "";
     height: 1px;
     width: 2000px;
-    background: url(../img/logo/title-line.png) repeat;
+    background: url(./img/logo/title-line.png) repeat;
     top: 50%;
     left: 107%;
     transform: translateY(-50%);
@@ -3488,8 +3490,7 @@ label {
     border-radius: 50%;
     transform: rotate(-25deg);
     position: absolute;
-    background: url(../img/logo/discount-shape.svg) no-repeat center
-        center/cover;
+    background: url(./img/logo/discount-shape.svg) no-repeat center center/cover;
     z-index: 5;
 }
 .banner-discount .offer {
@@ -3519,7 +3520,7 @@ label {
     margin-bottom: 5px;
     display: inline-block;
     background: -webkit-linear-gradient(-180deg, #555555, #555555);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 .single-search-product .desc .price {
@@ -3914,7 +3915,7 @@ label {
     margin-bottom: 5px;
     display: inline-block;
     background: -webkit-linear-gradient(-180deg, #555555, #555555);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 .single-sidebar-product .desc .price {
@@ -5292,7 +5293,7 @@ label {
     position: absolute;
     right: 0px;
     top: 14px;
-    @icnlude transition;
+    /* @icnlude transition; */
 }
 .review_item .media .media-body .reply_btn:hover {
     background: #ffba00;
@@ -6861,7 +6862,7 @@ label {
     border-color: #eee;
 }
 
-/*============ Start Blog Single Styles  =============*/
+/*============ Start Blog Single Styles =============*/
 .single-post-area .social-links {
     padding-top: 10px;
 }
@@ -7128,7 +7129,7 @@ label {
     color: #777;
 }
 
-/*============ End Blog Single Styles  =============*/
+/*============ End Blog Single Styles =============*/
 /*============== contact_area css ================*/
 .mapBox {
     height: 420px;

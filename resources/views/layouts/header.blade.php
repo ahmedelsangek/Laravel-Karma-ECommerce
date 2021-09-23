@@ -25,10 +25,20 @@
                             </ul>
                         </li>
                         <li class="nav-item submenu dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Fruits and Vegetables</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Meat and Fish</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Cooking</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Beverages</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Home and Cleaning</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Pest Control</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Office Products</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Beauty Products</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Health Products</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Pet Care</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Home Appliances</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Baby Care</a></li>
                             </ul>
                         </li>
                         <li class="nav-item submenu dropdown">
