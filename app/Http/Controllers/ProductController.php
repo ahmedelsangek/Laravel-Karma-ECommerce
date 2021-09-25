@@ -22,6 +22,20 @@ class ProductController extends Controller
         //
     }
 
+    public function GetProducts($id)
+    {
+        $this->data = Product::where('cat_id', $id)->paginate(9);
+
+        return view('profile.product.index', ['data' => $this->data]);
+    }
+
+    public function ProductDetails($id)
+    {
+        $this->data = Product::with('Category')->where('id', $id)->get();
+
+        return view('profile.product.product-details', ['data' => $this->data]);
+    }
+
     public function IndexDashboard()
     {
 

@@ -937,7 +937,7 @@ h6 {
     border: 1px solid #f1f1f1;
 }
 .primary-checkbox input:checked + label {
-    background: url(./img/elements/primary-check.png) no-repeat center
+    background: url(../img/elements/primary-check.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -973,7 +973,7 @@ h6 {
     border: 1px solid #f1f1f1;
 }
 .confirm-checkbox input:checked + label {
-    background: url(./img/elements/success-check.png) no-repeat center
+    background: url(../img/elements/success-check.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1013,7 +1013,7 @@ h6 {
     z-index: 3;
 }
 .disabled-checkbox input:checked + label {
-    background: url(./img/elements/disabled-check.png) no-repeat center
+    background: url(../img/elements/disabled-check.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1049,7 +1049,7 @@ h6 {
     border: 1px solid #f1f1f1;
 }
 .primary-radio input:checked + label {
-    background: url(./img/elements/primary-radio.png) no-repeat center
+    background: url(../img/elements/primary-radio.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1085,7 +1085,7 @@ h6 {
     border: 1px solid #f1f1f1;
 }
 .confirm-radio input:checked + label {
-    background: url(./img/elements/success-radio.png) no-repeat center
+    background: url(../img/elements/success-radio.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1125,7 +1125,7 @@ h6 {
     z-index: 3;
 }
 .disabled-radio input:checked + label {
-    background: url(./img/elements/disabled-radio.png) no-repeat center
+    background: url(../img/elements/disabled-radio.png) no-repeat center
         center/cover;
     border: none;
 }
@@ -1504,7 +1504,7 @@ h6 {
 /* banner area css
 ============================================================================================ */
 .banner-area {
-    background-image: url("../img/banner/banner-bg.jpg");
+    background-image: url(../img/banner/banner-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1607,7 +1607,7 @@ h6 {
 }
 
 .organic-breadcrumb {
-    background: url(./img/banner/common-banner.jpg) center no-repeat;
+    background: url(../img/banner/common-banner.jpg) center no-repeat;
     background-size: cover;
     padding-top: 130px;
 }
@@ -2098,7 +2098,7 @@ h6 {
 }
 .exclusive-deal-area .exclusive-left {
     position: realtive;
-    background: url(./img/exclusive.jpg) center no-repeat;
+    background: url(../img/exclusive.jpg) center no-repeat;
     background-size: cover;
     text-align: center;
     padding: 275px 0;
@@ -2538,14 +2538,14 @@ h6 {
     margin-left: 10px;
 }
 .quick-view-carousel-details .owl-controls .owl-dots .owl-dot:nth-child(1) {
-    background: url(./img/ob1.jpg);
+    background: url(../img/ob1.jpg);
     margin-left: 0;
 }
 .quick-view-carousel-details .owl-controls .owl-dots .owl-dot:nth-child(2) {
-    background: url(./img/ob2.jpg);
+    background: url(../img/ob2.jpg);
 }
 .quick-view-carousel-details .owl-controls .owl-dots .owl-dot:nth-child(3) {
-    background: url(./img/ob3.jpg);
+    background: url(../img/ob3.jpg);
 }
 .quick-view-carousel-details .owl-controls .owl-dots .owl-dot.active {
     box-shadow: 2.828px 2.828px 15px 0px rgba(0, 0, 0, 0.1);
@@ -2566,7 +2566,7 @@ h6 {
     .owl-controls
     .owl-dots
     .owl-dot:nth-child(1) {
-    background: url(./img/organic-food/ob1.jpg);
+    background: url(../img/organic-food/ob1.jpg);
     margin-left: 0;
 }
 .organic-body
@@ -2574,14 +2574,14 @@ h6 {
     .owl-controls
     .owl-dots
     .owl-dot:nth-child(2) {
-    background: url(./img/organic-food/ob2.jpg);
+    background: url(../img/organic-food/ob2.jpg);
 }
 .organic-body
     .quick-view-carousel
     .owl-controls
     .owl-dots
     .owl-dot:nth-child(3) {
-    background: url(./img/organic-food/ob3.jpg);
+    background: url(../img/organic-food/ob3.jpg);
 }
 .organic-body .organic span {
     color: #fff;
@@ -3371,7 +3371,7 @@ label {
     content: "";
     height: 1px;
     width: 500px;
-    background: url(./img/logo/title-line.png) repeat;
+    background: url(../img/logo/title-line.png) repeat;
     top: 50%;
     right: 120%;
     transform: translateY(-50%);
@@ -3381,7 +3381,7 @@ label {
     content: "";
     height: 1px;
     width: 500px;
-    background: url(./img/logo/title-line.png) repeat;
+    background: url(../img/logo/title-line.png) repeat;
     top: 50%;
     left: 120%;
     transform: translateY(-50%);
@@ -3403,7 +3403,7 @@ label {
     content: "";
     height: 1px;
     width: 200px;
-    background: url(./img/logo/title-line.png) repeat;
+    background: url(../img/logo/title-line.png) repeat;
     top: 50%;
     right: 107%;
     transform: translateY(-50%);
@@ -3413,7 +3413,7 @@ label {
     content: "";
     height: 1px;
     width: 2000px;
-    background: url(./img/logo/title-line.png) repeat;
+    background: url(../img/logo/title-line.png) repeat;
     top: 50%;
     left: 107%;
     transform: translateY(-50%);
@@ -3490,7 +3490,8 @@ label {
     border-radius: 50%;
     transform: rotate(-25deg);
     position: absolute;
-    background: url(./img/logo/discount-shape.svg) no-repeat center center/cover;
+    background: url(../img/logo/discount-shape.svg) no-repeat center
+        center/cover;
     z-index: 5;
 }
 .banner-discount .offer {
@@ -4306,9 +4307,6 @@ label {
     padding-left: 32px;
 }
 
-.sidebar-filter {
-    margin-top: 50px;
-}
 .sidebar-filter .top-filter-head {
     line-height: 60px;
     background: #828bb3;
@@ -5016,6 +5014,8 @@ label {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .s_product_text .list li {
     margin-bottom: 5px;
@@ -5025,6 +5025,10 @@ label {
     font-family: "Roboto", sans-serif;
     font-weight: normal;
     color: #555555;
+}
+.s_product_text .list li a.active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .s_product_text .list li a span {
     width: 90px;

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,13 @@ use App\Http\Controllers;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $productData = Product::where('cat_id', 2)->paginate(8);
+    return view('welcome', ['data' => $productData]);
 });
+// Route::get('/productDetails', function () {
+
+//     return view('profile.product.product-details');
+// });
 
 
 
@@ -27,4 +33,6 @@ Route::resource('category', 'CategoryController');
 
 //---------------- Product Controller ----------------------------
 Route::get('dashboard/product', 'ProductController@IndexDashboard');
+Route::get('GetProducts/{id}', 'ProductController@GetProducts');
+Route::get('productDetails/{id}', 'ProductController@ProductDetails');
 Route::resource('product', 'ProductController');

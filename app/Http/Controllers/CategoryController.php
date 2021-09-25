@@ -15,10 +15,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data = Category::withCount('Products')->get();
-        $productData = Product::get();
+        // $data = Category::withCount('Products')->get();
+        // $productData = Product::get();
 
-        return view('profile.product.index', ['data' => $data, "productList" => $productData]);
+        // return view('profile.product.index', ['data' => $data, "productList" => $productData]);
     }
 
     public function Dashboard()
