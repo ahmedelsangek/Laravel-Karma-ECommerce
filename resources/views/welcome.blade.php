@@ -213,28 +213,30 @@
                 </div>
                 <div class="row">
                     @foreach ($data as $product)
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ url('../storage/app/images/products/' . $product->image) }}" alt="">
-                            <div class="product-details">
-                                <h6>{{ $product->name }}</h6>
-                                <div class="price">
-                                    <h6>${{ $product->price }}</h6>
-                                    <h6 class="l-through">${{ $product->discount }}</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">add to bag</p>
-                                    </a>
-                                    <a href="{{ url('/productDetails/' . $product->id) }}" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
+                    <a href="{{ url('/productDetails/' . $product->id) }}">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single-product">
+                                <img class="img-fluid" src="{{ url('../storage/app/images/products/' . $product->image) }}" alt="">
+                                <div class="product-details">
+                                    <h6>{{ $product->name }}</h6>
+                                    <div class="price">
+                                        <h6>${{ $product->price }}</h6>
+                                        <h6 class="l-through">${{ $product->discount }}</h6>
+                                    </div>
+                                    <div class="prd-bottom">
+                                        <a href="{{ url('/addCart/' . $product->id) }}" class="social-info">
+                                            <span class="ti-bag"></span>
+                                            <p class="hover-text">add to bag</p>
+                                        </a>
+                                        <a href="{{ url('/productDetails/' . $product->id) }}" class="social-info">
+                                            <span class="lnr lnr-move"></span>
+                                            <p class="hover-text">Details</p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     @endforeach
                 </div>
             </div>

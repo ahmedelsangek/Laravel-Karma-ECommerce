@@ -3,83 +3,54 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    protected $data;
+    protected $op;
+
+    public function Index()
     {
-        //
+        $this->data = Order::get();
+        return view('profile.cart.index', ['data' => $this->data]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function Create($id)
     {
-        //
+        $this->data = Product::where('id', $id)->get();
+        // dd($this->data);
+
+        $this->op = Order::create([
+            'name' => $this->data[0]->name,
+            'price' => $this->data[0]->price,
+            'quantity' => 1,
+            'totalPrice' => $this->data[0]->price,
+            'image' => $this->data[0]->image,
+            'user_id' => auth('web')->user()->id
+        ]);
+
+        if ($this->op) {
+            return redirect(url('/cart'));
+        }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function Update(Request $request, $id)
     {
-        //
+        Order::where('id', $id)->Update(['quantity' => $request->quantity, 'totalPrice' => $request->new_price * $request->quantity]);
+
+        return back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Order $order)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Order $order)
+    public function Delete($id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Order $order)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Order $order)
-    {
-        //
+        Order::where('id', $id)->Delete();
+        return back();
     }
 }
