@@ -89,13 +89,13 @@
                                     </td>
                                     <td class="text-center">
                                         <input type="hidden" name="new_price" value="{{ $value->price }}">
-                                        <button type="submit" class="border-0" style="background: none;"><img width=" 35" height="35" src="{{ url('../resources/img/update-cart-11-96.png') }}" alt="update"></button>
+                                        <button type="submit" class="border-0" style="background: none; cursor:pointer;"><img width=" 35" height="35" src="{{ url('../resources/img/update-cart-11-96.png') }}" alt="update"></button>
                                     </td>
                                 </form>
                                 <td class="text-center">
                                     <form method="post" action="{{ url('/delete/' . $value->id) }}">
                                         @csrf
-                                        <button type="submit" class="border-0" style="background: none;"><img width="30" height="30" src="{{ url('../resources/img/bin.png') }}" alt="remove"></button>
+                                        <button type="submit" class="border-0" style="background: none; cursor:pointer;"><img width="30" height="30" src="{{ url('../resources/img/bin.png') }}" alt="remove"></button>
                                     </form>
                                 </td>
                             </tr>

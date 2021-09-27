@@ -15,7 +15,7 @@ class OrderController extends Controller
 
     public function Index()
     {
-        $this->data = Order::get();
+        $this->data = Order::where('user_id', auth('web')->user()->id)->get();
         return view('profile.cart.index', ['data' => $this->data]);
     }
 
