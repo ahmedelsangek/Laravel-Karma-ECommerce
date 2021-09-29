@@ -13,6 +13,11 @@ class OrderController extends Controller
     protected $data;
     protected $op;
 
+    public function __construct()
+    {
+        $this->middleware('checkUserLogin', ['except' => ['Index']]);
+    }
+
     public function Index()
     {
         $this->data = Order::where('user_id', auth('web')->user()->id)->get();

@@ -47,7 +47,7 @@ class AuthController extends Controller
         if (Auth::guard('web')->attempt(["email" => $request->email, "password" => $request->password], $this->status)) {
 
             $request->session()->regenerate();
-            return redirect(url('/checkout'));
+            return redirect(url('/cart'));
         }
 
 

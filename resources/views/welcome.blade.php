@@ -226,7 +226,7 @@
                                     <div class="prd-bottom">
                                         <a href="{{ url('/addCart/' . $product->id) }}" class="social-info">
                                             <span class="ti-bag"></span>
-                                            <p class="hover-text">add to bag</p>
+                                            <p class="hover-text">Add to cart</p>
                                         </a>
                                         <a href="{{ url('/productDetails/' . $product->id) }}" class="social-info">
                                             <span class="lnr lnr-move"></span>

@@ -44,7 +44,7 @@ Route::get('/logout', 'AuthController@Logout');
 
 
 //---------------- Cart ----------------------------
-Route::get('/cart', 'OrderController@Index');
+Route::get('/cart', 'OrderController@Index')->middleware('checkUserLogin');
 Route::get('/addCart/{id}', 'OrderController@Create');
 
 
