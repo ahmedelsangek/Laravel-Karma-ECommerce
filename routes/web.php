@@ -6,9 +6,9 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 
 /*
-|--------------------------------------------------------------------------
+|==========================================================================
 | Web Routes
-|--------------------------------------------------------------------------
+|==========================================================================
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
@@ -22,19 +22,19 @@ Route::get('/', function () {
 });
 
 
-//---------------- Category ----------------------------
+//================ Category ============================
 Route::get('dashboard/category', 'CategoryController@Dashboard');
 Route::resource('category', 'CategoryController');
 
 
-//---------------- Product ----------------------------
+//================ Product ============================
 Route::get('dashboard/product', 'ProductController@IndexDashboard');
 Route::get('GetProducts/{id}', 'ProductController@GetProducts');
 Route::get('productDetails/{id}', 'ProductController@ProductDetails');
 Route::resource('product', 'ProductController');
 
 
-//---------------- Authentication ----------------------------
+//================ Authentication ============================
 Route::view('/register', 'Authentication.register');
 Route::post('/register', 'AuthController@Register');
 Route::view('/login', 'Authentication.login');
@@ -43,11 +43,17 @@ Route::get('/logout', 'AuthController@Logout');
 
 
 
-//---------------- Cart ----------------------------
+//================ Cart ============================
 Route::get('/cart', 'OrderController@Index')->middleware('checkUserLogin');
 Route::get('/addCart/{id}', 'OrderController@Create');
 
 
-//---------------- Order ----------------------------
+//================ Order ============================
 Route::post('/update/{id}', 'OrderController@Update');
 Route::post('/delete/{id}', 'OrderController@Delete');
+
+
+//================ CheckOut ============================
+Route::get('/checkout', 'OrderController@GoCheckout');
+Route::post('/confirm', 'OrderController@Checkout');
+Route::get('/completeOrder', 'OrderController@CompleteOrder');

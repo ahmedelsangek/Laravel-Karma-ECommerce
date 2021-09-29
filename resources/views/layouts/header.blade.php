@@ -34,6 +34,15 @@
                         <li class="nav-item">
                             <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
                         </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <button class="primary-btn d-flex align-items-center" style="border-radius: 5%; height: 60%; border: none;">
+                                @if(auth('web')->check())
+                                <a class="nav-link" href="{{ url('/logout') }}" style="color: white;">Sign Out</a>
+                                @else
+                                <a class="nav-link" href="{{ url('/login') }}" style="color: white;">Sign In</a>
+                                @endif
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>

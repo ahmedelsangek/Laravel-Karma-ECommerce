@@ -103,7 +103,7 @@
                         </tbody>
                     </table>
                     <div class="cupon_text d-flex align-items-center">
-                        <a class="primary-btn" style="border-radius: 0; margin-left:10px;" href="#">Apply</a>
+                        <a class="primary-btn" style="border-radius: 0; margin-left:10px;" href="{{ url('/checkout') }}">Continue to checkout</a>
                     </div>
                 </div>
             </div>

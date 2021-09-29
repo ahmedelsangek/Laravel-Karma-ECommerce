@@ -15,6 +15,7 @@ class UserInformation extends Model
         'address',
         'city',
         'postCode',
+        'user_id'
     ];
 
 

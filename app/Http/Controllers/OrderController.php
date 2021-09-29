@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\UserInformation;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -57,5 +57,40 @@ class OrderController extends Controller
     {
         Order::where('id', $id)->Delete();
         return back();
+    }
+
+
+    public function GoCheckout()
+    {
+        $this->data = Order::where('user_id', auth('web')->user()->id)->get();
+        $costs = Order::where('user_id', auth('web')->user()->id)->get()->sum('totalPrice');
+        return view('profile.checkout.index', ['data' => $this->data, 'cost' => $costs]);
+    }
+
+
+    public function Checkout(Request $request)
+    {
+        $this->data = $this->validate($request, [
+            "phone" => "required",
+            "country" => "required",
+            "city" => "required",
+            "address" => "required",
+            "postCode" => "required"
+        ]);
+
+        $this->data['user_id'] = auth('web')->user()->id;
+
+        $this->op = UserInformation::create($this->data);
+
+        if ($this->op) {
+            return redirect(url('/completeOrder'));
+        } else {
+            return back();
+        }
+    }
+
+    public function CompleteOrder()
+    {
+        return view('profile.checkout.confirmation');
     }
 }
